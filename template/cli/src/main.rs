@@ -1,8 +1,6 @@
 use clap::Parser;
 use lib::*;
 
-use lib::miette::IntoDiagnostic;
-
 type Result<T> = lib::miette::Result<T>;
 
 /// Simple program to greet a person

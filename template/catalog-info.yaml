@@ -10,3 +10,12 @@ spec:
   type: cli
   lifecycle: staging
   owner: ${{values.owner | dump}}
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: rust-cli-workspace-template
+spec:
+  type: url
+  targets:
+    - http://github.com/Jimdo/rust-cli-workspace-template
