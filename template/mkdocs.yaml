@@ -1,0 +1,5 @@
+site_name: ${{values.title | dump}}
+site_description: 'Main documentation for Jimdex Backstage'
+
+plugins:
+  - techdocs-core
