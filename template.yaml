@@ -1,4 +1,4 @@
-apiVersion: scaffolder.backstage.io/v1beta3
+apiVersion: scaffolder.backstage.io/v1beta2
 kind: Template
 
 metadata:
@@ -59,6 +59,7 @@ spec:
           name: ${{ parameters.name }}
           description: ${{ parameters.description }}
           owner: ${{ parameters.owner }}
+          catalogfile: "catalog-info.yaml"
 
     - id: publish
       name: Publish
@@ -73,7 +74,7 @@ spec:
       action: catalog:register
       input:
         repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
-        catalogInfoPath: '/catalog-info.yaml'
+        catalogInfoPath: '/{{ values.catalogfile | dump }}'
 
 
   output:

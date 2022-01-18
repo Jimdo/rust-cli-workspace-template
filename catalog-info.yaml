@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: rust-cli-workspace-template
+  description: Backstage template for creating Rust CLI applications that use Cargo workspaces
+  annotations:
+    github.com/project-slug: Jimdo/rust-cli-workspace-template
+  tags:
+    - rust
+    - backstage-template
+spec:
+  type: template
+  owner: devex
+  lifecycle: production
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: rust-cli-workspace-template
+  description: Backstage Template - Rust CLI with Cargo workspaces
+spec:
+  type: url
+  targets:
+    - https://github.com/Jimdo/rust-cli-workspace-template/blob/main/template.yaml
